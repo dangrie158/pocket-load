@@ -3461,7 +3461,7 @@ Based on the following sources:&lt;p&gt;
 <attribute name="NAME" x="51" y="39.25" size="0.6096" layer="26" ratio="11" rot="MR0" align="center"/>
 <attribute name="VALUE" x="42.555" y="37.69" size="0.889" layer="28" ratio="11" rot="MR90"/>
 </element>
-<element name="IC1" library="atmel" library_urn="urn:adsk.eagle:library:105" package="TQFP32-08" package3d_urn="urn:adsk.eagle:package:4313/1" value="MEGA8-AI" x="17" y="13" smashed="yes" rot="MR225">
+<element name="IC1" library="atmel" library_urn="urn:adsk.eagle:library:105" package="TQFP32-08" package3d_urn="urn:adsk.eagle:package:4313/1" value="MEGA328" x="17" y="13" smashed="yes" rot="MR225">
 <attribute name="MF" value="" x="17" y="13" size="1.778" layer="28" rot="MR225" display="off"/>
 <attribute name="MPN" value="ATMEGA8-16AU" x="17" y="13" size="1.778" layer="28" rot="MR225" display="off"/>
 <attribute name="NAME" x="17" y="18.75" size="0.6096" layer="26" rot="MR0" align="center"/>

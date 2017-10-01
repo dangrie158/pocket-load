@@ -31580,7 +31580,7 @@ Source: avr.lbr</description>
 <part name="+3V6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="+3V7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="U1" library="Seeed-OPL-ic" deviceset="PMIC-CJT1117-3.3(SOT223)" device="" value="CJT1117-3.3-SOT223"/>
-<part name="IC1" library="atmel" library_urn="urn:adsk.eagle:library:105" deviceset="MEGA8" device="-AI" package3d_urn="urn:adsk.eagle:package:4313/1"/>
+<part name="IC1" library="atmel" library_urn="urn:adsk.eagle:library:105" deviceset="MEGA8" device="-AI" package3d_urn="urn:adsk.eagle:package:4313/1" value="MEGA328"/>
 <part name="U3" library="components" deviceset="MCP9701AT-E/TT" device=""/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
