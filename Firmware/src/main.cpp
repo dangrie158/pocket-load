@@ -205,8 +205,10 @@ void handleHID() {
   }
 
   //handle encoder
-  int16_t encoderNewSteps = encoder.getValue();
-  setCurrent(currentSet + (encoderNewSteps * 10));
+  if(poweredOn){
+    int16_t encoderNewSteps = encoder.getValue();
+    setCurrent(currentSet + (encoderNewSteps * 10));
+  }
 
   //handle encoder button
   ClickEncoder::Button buttonState = encoder.getButton();
@@ -245,6 +247,8 @@ void loop() {
     fan.switchOff();
   }
 
+  handleHID();
+
   if(poweredOn){
     static uint32_t lastUpdate = millis();
 
@@ -265,8 +269,6 @@ void loop() {
       accumulatedmWh += 1;
       accumulatedmWmsec -= USEC_PER_HOUR;
     }
-
-    handleHID();
 
     display.clear();
 
