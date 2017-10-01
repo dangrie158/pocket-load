@@ -6,6 +6,9 @@
 #include "SSD1306.h"
 #include "Font5x7.h"
 #include "Font11x15.h"
+#include "Button.h"
+#include "Output.h"
+#include "AnalogInput.h"
 
 #include "definitions.h"
 #include "bitmaps.h"
@@ -17,6 +20,9 @@ Font11x15 bigFont;
 MCP4921 dac(MCP4921_CS);
 
 ClickEncoder encoder(ENC_A, ENC_B, ENC_BTN, ENC_STEPS_PER_NOTCH);
+Button powerButton(BTN_PWR, true);
+Output fan(FAN);
+AnalogInput tempSensor(TEMP_SENS, 1.0f, 100);
 
 uint32_t accumulatedmWh = 0; //accumulated milliWattHours
 uint32_t accumulatedmAh = 0; //accumulated milliAmpereHours
@@ -31,10 +37,18 @@ uint16_t currentSet = 0; // current setpoint in mA
 // 1: Watts
 // 2: milli Amperehours
 // 3: milli Watthours
-uint8_t currentDetail = 2;
+uint8_t currentDetail = 0;
+
+bool poweredOn = true;
+bool loadEnabled = false;
+
+uint8_t dacValueForCurrent(uint16_t current){
+  return 0; //TODO:
+}
 
 void timerIsr() {
   encoder.service();
+  powerButton.update();
 }
 
 void resetAccumulatedValues(){
@@ -45,9 +59,23 @@ void resetAccumulatedValues(){
   accumulatedmWmsec = 0;
 }
 
-void shutdown(){
+void switchOnLoad(){
+  dac.setValue(dacValueForCurrent(currentSet));
+  loadEnabled = true;
+}
+
+void switchOffLoad(){
+  dac.setValue(0);
+  loadEnabled = false;
+}
+
+void powerDown(){
+  switchOffLoad();
+
   display.shutdown();
   dac.shutdown();
+
+  poweredOn = false;
 }
 
 void powerUp(){
@@ -57,8 +85,13 @@ void powerUp(){
   delay(1000);
   dac.wakeup();
   resetAccumulatedValues();
-
   display.clear();
+
+  switchOffLoad();
+
+  //reset to a "save" state
+  currentDetail = 0;
+  poweredOn = true;
 }
 
 void drawCurrent(uint32_t loadCurrent){
@@ -135,27 +168,47 @@ uint16_t measureVoltage(){
 
 uint16_t measureCurrent(){
   //TODO: implement ADC reading
-  return currentSet;
+  return loadEnabled ? currentSet : 0;
 }
 
 uint8_t measureTemperature(){
-  //TODO: implement ADC reading
-  static uint8_t base = 23;
-  //base += random(-2, 2);
-  return base;
+  uint16_t voltage = map(tempSensor.read(), 0, 1024, 0, 3300);
+  uint8_t temp = (voltage - V0) / Tc;
+  return temp;
 }
 
 void setCurrent(uint32_t current){
-
   if(current >= 0 && current <= I_MAX){
     currentSet = current;
-    //TODO: set dac value apropriatley
+    if(loadEnabled){
+      dac.setValue(dacValueForCurrent(currentSet));
+    }
   }
 }
 
 void handleHID() {
+  //handle power button
+  if(powerButton.getStatus() == Clicked){
+    if(!poweredOn){
+      powerUp();
+    }else{
+      if(loadEnabled){
+        switchOffLoad();
+      }else{
+        switchOnLoad();
+      }
+    }
+  }else if(powerButton.getStatus() == Held){
+    if(poweredOn){
+      powerDown();
+    }
+  }
+
+  //handle encoder
   int16_t encoderNewSteps = encoder.getValue();
   setCurrent(currentSet + (encoderNewSteps * 10));
+
+  //handle encoder button
   ClickEncoder::Button buttonState = encoder.getButton();
   switch (buttonState) {
     case ClickEncoder::Held:
@@ -178,16 +231,25 @@ void setup()   {
   Timer1.attachInterrupt(timerIsr);
 
   encoder.setAccelerationEnabled(true);
-
-  Serial.begin(9600);
 }
 
 void loop() {
+
+  // check the fan temperature outside the poweredOn check
+  // to make sure the FET can cool down quickly, even if
+  // the user switches it off while its hot
+  uint8_t heatsinkTemperature = measureTemperature(); // °C
+  if(heatsinkTemperature > FAN_TEMP_HIGH){
+    fan.switchOn();
+  }else if(heatsinkTemperature < FAN_TEMP_LOW){
+    fan.switchOff();
+  }
+
+  if(poweredOn){
     static uint32_t lastUpdate = millis();
 
     uint32_t loadVoltage = measureVoltage(); // mV
     uint32_t loadCurrent = measureCurrent(); // mA
-    uint8_t heatsinkTemperature = measureTemperature(); // °C
     uint32_t loadPower = (loadVoltage * loadCurrent) / 100; //mW
     uint32_t timeSinceLastUpdate = millis() - lastUpdate; // mS
     lastUpdate = millis();
@@ -226,4 +288,5 @@ void loop() {
     drawSecondaryInfo(currentSet, loadCurrent, loadVoltage, heatsinkTemperature);
 
     display.refresh();
+  }
 }
