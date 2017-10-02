@@ -29477,8 +29477,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <smd name="P$3" x="2.54" y="-2.54" dx="3.81" dy="1.9304" layer="1" rot="R90"/>
 </package>
 <package name="6MM-BANANA-MOUNT">
-<hole x="0" y="0" drill="6"/>
-<pad name="P$1" x="0" y="0" drill="6" diameter="8"/>
+<pad name="P$1" x="0" y="0" drill="6" diameter="10"/>
 <circle x="0" y="0" radius="5.5" width="0.127" layer="21"/>
 </package>
 <package name="SO08">
@@ -31495,6 +31494,253 @@ Source: avr.lbr</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="Seeed-OPL-fuse">
+<packages>
+<package name="F3366">
+<wire x1="3.302" y1="1.778" x2="3.302" y2="-1.778" width="0.127" layer="21"/>
+<wire x1="3.302" y1="-1.778" x2="-3.302" y2="-1.778" width="0.127" layer="21"/>
+<wire x1="-3.302" y1="-1.778" x2="-3.302" y2="1.778" width="0.127" layer="21"/>
+<wire x1="-3.302" y1="1.778" x2="3.302" y2="1.778" width="0.127" layer="21"/>
+<wire x1="-3.302" y1="1.778" x2="3.302" y2="1.778" width="0.127" layer="39"/>
+<wire x1="3.302" y1="1.778" x2="3.302" y2="-1.778" width="0.127" layer="39"/>
+<wire x1="3.302" y1="-1.778" x2="-3.302" y2="-1.778" width="0.127" layer="39"/>
+<wire x1="-3.302" y1="-1.778" x2="-3.302" y2="1.778" width="0.127" layer="39"/>
+<smd name="1" x="-2.286" y="0" dx="3.302" dy="1.524" layer="1" rot="R90"/>
+<smd name="2" x="2.286" y="0" dx="3.302" dy="1.524" layer="1" rot="R90"/>
+<text x="-3.175" y="2.159" size="0.889" layer="25" ratio="11">&gt;NAME</text>
+<text x="-3.175" y="-3.048" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
+<text x="-2.667" y="-0.508" size="1.27" layer="33">&gt;name</text>
+<rectangle x1="-3.302" y1="-1.778" x2="3.302" y2="1.778" layer="39"/>
+</package>
+<package name="F2-22.5-D2.3XL22.6MM">
+<wire x1="13.25" y1="5" x2="13.25" y2="-5" width="0.127" layer="21"/>
+<wire x1="13.25" y1="-5" x2="-13.25" y2="-5" width="0.127" layer="21"/>
+<wire x1="-13.25" y1="-5" x2="-13.25" y2="5" width="0.127" layer="21"/>
+<wire x1="-13.25" y1="5" x2="13.25" y2="5" width="0.127" layer="21"/>
+<pad name="1" x="-11.25" y="0" drill="1.5" diameter="2.3"/>
+<pad name="2" x="11.25" y="0" drill="1.5" diameter="2.3"/>
+<text x="-2.995" y="-0.603" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
+<text x="-2.995" y="5.715" size="0.889" layer="25" ratio="11">&gt;NAME</text>
+<rectangle x1="-13.155" y1="-4.953" x2="13.261" y2="4.953" layer="39"/>
+</package>
+<package name="F2920">
+<description>http://www.fuse-china.com/2920smdfuses.htm</description>
+<smd name="1" x="-3.7" y="0" dx="5.6" dy="2.3" layer="1" rot="R90"/>
+<smd name="2" x="3.7" y="0" dx="5.6" dy="2.3" layer="1" rot="R90"/>
+<wire x1="-3.7" y1="2.6" x2="3.7" y2="2.6" width="0.127" layer="51"/>
+<wire x1="3.7" y1="2.6" x2="3.7" y2="-2.6" width="0.127" layer="51"/>
+<wire x1="3.7" y1="-2.6" x2="-3.7" y2="-2.6" width="0.127" layer="51"/>
+<wire x1="-3.7" y1="-2.6" x2="-3.7" y2="2.6" width="0.127" layer="51"/>
+<rectangle x1="-3.7" y1="-2.6" x2="3.7" y2="2.6" layer="39"/>
+<text x="-1.905" y="3.175" size="0.889" layer="25" ratio="11">&gt;NAME</text>
+<text x="-1.905" y="-4.191" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
+<wire x1="-2.4" y1="2.6" x2="2.4" y2="2.6" width="0.127" layer="21"/>
+<wire x1="-2.4" y1="-2.6" x2="2.4" y2="-2.6" width="0.127" layer="21"/>
+</package>
+<package name="F2-5.1-10.4X3.0X14.3MM">
+<description>http://www.fuse-china.com/kehufubaoxiansi.htm</description>
+<wire x1="-5.2" y1="1.5" x2="5.2" y2="1.5" width="0.127" layer="51"/>
+<wire x1="5.2" y1="1.5" x2="5.2" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="5.2" y1="-1.5" x2="-5.2" y2="-1.5" width="0.127" layer="51"/>
+<wire x1="-5.2" y1="-1.5" x2="-5.2" y2="1.5" width="0.127" layer="21"/>
+<pad name="1" x="-2.413" y="0.635" drill="1.2" diameter="2"/>
+<pad name="2" x="2.413" y="-0.635" drill="1.2" diameter="2"/>
+<text x="-1.27" y="1.905" size="0.889" layer="21" ratio="11">&gt;NAME</text>
+<text x="-1.27" y="-2.794" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
+<rectangle x1="-5.2" y1="-1.5" x2="5.2" y2="1.5" layer="39"/>
+<wire x1="5.2" y1="-1.5" x2="3.3" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-5.2" y1="-1.5" x2="1.6" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-5.2" y1="1.5" x2="-3.3" y2="1.5" width="0.127" layer="21"/>
+<wire x1="5.2" y1="1.5" x2="-1.6" y2="1.5" width="0.127" layer="21"/>
+</package>
+<package name="F1812">
+<description>http://www.fuse-china.com/1812smdfuses.htm</description>
+<wire x1="-3.048" y1="1.651" x2="3.048" y2="1.651" width="0.127" layer="21"/>
+<wire x1="3.048" y1="-1.651" x2="-3.048" y2="-1.651" width="0.127" layer="21"/>
+<smd name="1" x="-2.159" y="0" dx="3.048" dy="1.27" layer="1" rot="R90"/>
+<smd name="2" x="2.159" y="0" dx="3.048" dy="1.27" layer="1" rot="R90"/>
+<wire x1="-3.048" y1="1.651" x2="-3.048" y2="-1.651" width="0.127" layer="21"/>
+<wire x1="3.048" y1="1.651" x2="3.048" y2="-1.651" width="0.127" layer="21"/>
+<polygon width="0.127" layer="51">
+<vertex x="-2.286" y="1.651"/>
+<vertex x="-1.905" y="1.651"/>
+<vertex x="-1.905" y="-1.651"/>
+<vertex x="-2.286" y="-1.651"/>
+<vertex x="-2.286" y="-0.381" curve="90"/>
+<vertex x="-2.032" y="0" curve="90"/>
+<vertex x="-2.286" y="0.381"/>
+</polygon>
+<polygon width="0.127" layer="51">
+<vertex x="2.286" y="-1.651"/>
+<vertex x="1.905" y="-1.651"/>
+<vertex x="1.905" y="1.651"/>
+<vertex x="2.286" y="1.651"/>
+<vertex x="2.286" y="0.381" curve="90"/>
+<vertex x="2.032" y="0" curve="90"/>
+<vertex x="2.286" y="-0.381"/>
+</polygon>
+<text x="-2.54" y="1.905" size="0.889" layer="25" ratio="11">&gt;NAME</text>
+<text x="-2.54" y="-2.794" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
+<rectangle x1="-2.794" y1="-1.524" x2="2.794" y2="1.524" layer="39"/>
+</package>
+<package name="F1210">
+<wire x1="-1.585" y1="1.29" x2="1.585" y2="1.29" width="0.127" layer="51"/>
+<wire x1="1.585" y1="1.29" x2="1.585" y2="-1.29" width="0.127" layer="51"/>
+<wire x1="1.585" y1="-1.29" x2="-1.585" y2="-1.29" width="0.127" layer="51"/>
+<wire x1="-1.585" y1="-1.29" x2="-1.585" y2="1.29" width="0.127" layer="51"/>
+<smd name="1" x="-1.6" y="0" dx="2.5" dy="1.2" layer="1" rot="R90"/>
+<smd name="2" x="1.6" y="0" dx="2.5" dy="1.2" layer="1" rot="R90"/>
+<rectangle x1="-1.524" y1="-1.27" x2="1.524" y2="1.27" layer="39"/>
+<text x="-2.54" y="1.651" size="0.889" layer="25" ratio="11">&gt;NAME</text>
+<text x="-2.54" y="-2.54" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
+<wire x1="-0.9" y1="1.3" x2="0.9" y2="1.3" width="0.127" layer="21"/>
+<wire x1="-0.9" y1="-1.3" x2="0.9" y2="-1.3" width="0.127" layer="21"/>
+</package>
+<package name="F1206">
+<wire x1="-2.159" y1="1.016" x2="2.159" y2="1.016" width="0.127" layer="21"/>
+<wire x1="2.159" y1="1.016" x2="2.159" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="2.159" y1="-1.016" x2="-2.159" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="-2.159" y1="-1.016" x2="-2.159" y2="1.016" width="0.127" layer="21"/>
+<smd name="1" x="-1.397" y="0" dx="1.27" dy="1.778" layer="1"/>
+<smd name="2" x="1.397" y="0" dx="1.27" dy="1.778" layer="1"/>
+<text x="-1.905" y="1.27" size="0.889" layer="25" font="vector" ratio="11">&gt;NAME</text>
+<text x="-1.905" y="-2.159" size="0.889" layer="27" font="vector" ratio="11">&gt;VALUE</text>
+<rectangle x1="-2.032" y1="-0.889" x2="2.032" y2="0.889" layer="39"/>
+</package>
+<package name="F2-5.1-11.4X3.0X18.3MM">
+<wire x1="-5.7" y1="1.5" x2="5.7" y2="1.5" width="0.127" layer="51"/>
+<wire x1="5.7" y1="1.5" x2="5.7" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="5.7" y1="-1.5" x2="-5.7" y2="-1.5" width="0.127" layer="51"/>
+<wire x1="-5.7" y1="-1.5" x2="-5.7" y2="1.5" width="0.127" layer="21"/>
+<pad name="1" x="-2.54" y="1.1" drill="0.889" diameter="1.397"/>
+<pad name="2" x="2.54" y="-1.1" drill="0.889" diameter="1.397"/>
+<rectangle x1="-5.715" y1="-1.524" x2="5.715" y2="1.524" layer="39"/>
+<text x="-1.27" y="2.032" size="0.889" layer="25" ratio="11">&gt;NAME</text>
+<text x="-1.27" y="-3.048" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
+<wire x1="-5.7" y1="1.5" x2="-3.4" y2="1.5" width="0.127" layer="21"/>
+<wire x1="5.7" y1="1.5" x2="-1.7" y2="1.5" width="0.127" layer="21"/>
+<wire x1="5.7" y1="-1.5" x2="3.4" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-5.7" y1="-1.5" x2="1.7" y2="-1.5" width="0.127" layer="21"/>
+</package>
+<package name="F2-5.1-21.3X3.1X26.4MM">
+<wire x1="-10" y1="1.55" x2="10" y2="1.55" width="0.127" layer="51"/>
+<wire x1="10" y1="1.55" x2="10" y2="-1.55" width="0.127" layer="21"/>
+<wire x1="10" y1="-1.55" x2="-10" y2="-1.55" width="0.127" layer="51"/>
+<pad name="1" x="-5.1" y="-1.15" drill="1.1" diameter="1.7"/>
+<pad name="2" x="5.1" y="1.15" drill="1.1" diameter="1.7"/>
+<text x="-2.54" y="1.905" size="0.889" layer="25" ratio="11">&gt;NAME</text>
+<text x="-2.54" y="-2.794" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
+<rectangle x1="-10" y1="-1.55" x2="10" y2="1.55" layer="39"/>
+<wire x1="-10" y1="-1.55" x2="-10" y2="1.55" width="0.127" layer="21"/>
+<wire x1="-10" y1="1.55" x2="4" y2="1.55" width="0.127" layer="21"/>
+<wire x1="10" y1="1.55" x2="6" y2="1.55" width="0.127" layer="21"/>
+<wire x1="10" y1="-1.55" x2="-4.2" y2="-1.55" width="0.127" layer="21"/>
+<wire x1="-10" y1="-1.55" x2="-6" y2="-1.55" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="FUSE">
+<wire x1="-1.016" y1="0" x2="0" y2="-1.016" width="0.254" layer="94" curve="-300.510237"/>
+<wire x1="0" y1="-1.016" x2="1.016" y2="0" width="0.254" layer="94" curve="-300.510237"/>
+<wire x1="-2.54" y1="0" x2="-1.016" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="1.016" y2="0" width="0.254" layer="94"/>
+<text x="-3.81" y="2.54" size="1.27" layer="95" ratio="10">&gt;NAME</text>
+<text x="-3.81" y="-2.54" size="1.27" layer="96" ratio="10">&gt;VALUE</text>
+<pin name="1" x="-5.08" y="0" visible="off" length="short"/>
+<pin name="2" x="5.08" y="0" visible="off" length="short" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FUSE" prefix="F" uservalue="yes">
+<gates>
+<gate name="F" symbol="FUSE" x="-2.54" y="-2.54"/>
+</gates>
+<devices>
+<device name="500MA" package="F3366">
+<connects>
+<connect gate="F" pin="1" pad="1"/>
+<connect gate="F" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="GLASS" package="F2-22.5-D2.3XL22.6MM">
+<connects>
+<connect gate="F" pin="1" pad="1"/>
+<connect gate="F" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SMD2920" package="F2920">
+<connects>
+<connect gate="F" pin="1" pad="1"/>
+<connect gate="F" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="'RLD16P500GF'" package="F2-5.1-10.4X3.0X14.3MM">
+<connects>
+<connect gate="F" pin="1" pad="1"/>
+<connect gate="F" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="'1812'" package="F1812">
+<connects>
+<connect gate="F" pin="1" pad="1"/>
+<connect gate="F" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="'1210'" package="F1210">
+<connects>
+<connect gate="F" pin="1" pad="1"/>
+<connect gate="F" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="'1206'" package="F1206">
+<connects>
+<connect gate="F" pin="1" pad="1"/>
+<connect gate="F" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="'RLD30P250UF'" package="F2-5.1-11.4X3.0X18.3MM">
+<connects>
+<connect gate="F" pin="1" pad="1"/>
+<connect gate="F" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="'RLD60P250XF'" package="F2-5.1-21.3X3.1X26.4MM">
+<connects>
+<connect gate="F" pin="1" pad="1"/>
+<connect gate="F" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -31532,17 +31778,17 @@ Source: avr.lbr</description>
 <part name="D1" library="diode" deviceset="DIODE-" device="SOD323-W" value="BAS16J"/>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100"/>
 <part name="VREF" library="testpad" deviceset="TP" device="B1,27"/>
-<part name="VLOAD_REF" library="testpad" deviceset="TP" device="B1,27"/>
-<part name="FET_DRV" library="testpad" deviceset="TP" device="B1,27"/>
-<part name="VLOAD_DROP" library="testpad" deviceset="TP" device="B1,27"/>
-<part name="VLOAD" library="testpad" deviceset="TP" device="B1,27"/>
+<part name="USET" library="testpad" deviceset="TP" device="B1,27"/>
+<part name="UDRV" library="testpad" deviceset="TP" device="B1,27"/>
+<part name="UDROP" library="testpad" deviceset="TP" device="B1,27"/>
+<part name="ULOAD" library="testpad" deviceset="TP" device="B1,27"/>
 <part name="+3V3" library="testpad" deviceset="TP" device="B1,27"/>
 <part name="+12V" library="testpad" deviceset="TP" device="B1,27"/>
 <part name="FAN1_CONN" library="SparkFun-Connectors" deviceset="M02" device="POLAR"/>
 <part name="D2" library="diode" deviceset="DIODE-" device="SOD323-W" value="BAS16J"/>
 <part name="R12" library="rcl" deviceset="R-EU_" device="R0603" value="39k"/>
 <part name="R13" library="rcl" deviceset="R-EU_" device="R0603" value="1k"/>
-<part name="VLOAD_ATT" library="testpad" deviceset="TP" device="B1,27"/>
+<part name="UATT" library="testpad" deviceset="TP" device="B1,27"/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
 <part name="FAN1" library="testpad" deviceset="TP" device="B1,27"/>
 <part name="3V3_OK" library="SparkFun-LED" deviceset="LED" device="0603"/>
@@ -31609,6 +31855,7 @@ Source: avr.lbr</description>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
+<part name="F1" library="Seeed-OPL-fuse" deviceset="FUSE" device="'1206'" value="6.3A/63V"/>
 </parts>
 <sheets>
 <sheet>
@@ -31719,18 +31966,18 @@ to the internal 2.048V Ref</text>
 <attribute name="NAME" x="229.87" y="87.63" size="1.524" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="232.41" y="85.09" size="1.778" layer="97"/>
 </instance>
-<instance part="VLOAD_REF" gate="G$1" x="236.22" y="45.72" smashed="yes">
+<instance part="USET" gate="G$1" x="236.22" y="45.72" smashed="yes">
 <attribute name="NAME" x="234.95" y="46.99" size="1.6764" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="237.49" y="44.45" size="1.778" layer="97"/>
 </instance>
-<instance part="FET_DRV" gate="G$1" x="259.08" y="48.26" smashed="yes">
+<instance part="UDRV" gate="G$1" x="259.08" y="48.26" smashed="yes">
 <attribute name="NAME" x="250.19" y="49.53" size="1.6764" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="260.35" y="46.99" size="1.778" layer="97"/>
 </instance>
-<instance part="VLOAD_DROP" gate="G$1" x="294.64" y="40.64" smashed="yes">
+<instance part="UDROP" gate="G$1" x="294.64" y="40.64" smashed="yes">
 <attribute name="TP_SIGNAL_NAME" x="295.91" y="39.37" size="1.778" layer="97"/>
 </instance>
-<instance part="VLOAD" gate="G$1" x="271.78" y="76.2"/>
+<instance part="ULOAD" gate="G$1" x="271.78" y="76.2"/>
 <instance part="+3V3" gate="G$1" x="154.94" y="86.36" smashed="yes">
 <attribute name="NAME" x="153.67" y="87.63" size="1.524" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="156.21" y="85.09" size="1.778" layer="97"/>
@@ -31746,7 +31993,7 @@ to the internal 2.048V Ref</text>
 </instance>
 <instance part="R12" gate="G$1" x="271.78" y="66.04" rot="R90"/>
 <instance part="R13" gate="G$1" x="271.78" y="55.88" rot="R90"/>
-<instance part="VLOAD_ATT" gate="G$1" x="276.86" y="66.04"/>
+<instance part="UATT" gate="G$1" x="276.86" y="66.04"/>
 <instance part="GND22" gate="1" x="30.48" y="-15.24" rot="R270"/>
 <instance part="FAN1" gate="G$1" x="134.62" y="50.8" smashed="yes" rot="R90">
 <attribute name="NAME" x="138.43" y="49.53" size="1.6764" layer="95" rot="R180"/>
@@ -31757,7 +32004,7 @@ to the internal 2.048V Ref</text>
 <instance part="R22" gate="G$1" x="149.86" y="30.48" rot="R270"/>
 <instance part="R7" gate="G$1" x="200.66" y="35.56" rot="R90"/>
 <instance part="R8" gate="G$1" x="200.66" y="48.26" rot="R270"/>
-<instance part="IN+" gate="G$1" x="297.18" y="81.28"/>
+<instance part="IN+" gate="G$1" x="297.18" y="86.36"/>
 <instance part="IN-" gate="G$1" x="309.88" y="81.28"/>
 <instance part="S1" gate="G$1" x="81.28" y="-17.78" rot="R90"/>
 <instance part="GND9" gate="1" x="81.28" y="-27.94"/>
@@ -31816,6 +32063,7 @@ to the internal 2.048V Ref</text>
 <instance part="GND13" gate="1" x="60.96" y="27.94"/>
 <instance part="GND14" gate="1" x="83.82" y="33.02" rot="R270"/>
 <instance part="GND15" gate="1" x="83.82" y="40.64" rot="R270"/>
+<instance part="F1" gate="F" x="297.18" y="78.74" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -32061,7 +32309,7 @@ to the internal 2.048V Ref</text>
 <wire x1="226.06" y1="81.28" x2="226.06" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="60.96" x2="231.14" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="231.14" y1="60.96" x2="231.14" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="VLOAD_REF" gate="G$1" pin="TP"/>
+<pinref part="USET" gate="G$1" pin="TP"/>
 <pinref part="IC2" gate="B" pin="+IN"/>
 <wire x1="236.22" y1="43.18" x2="231.14" y2="43.18" width="0.1524" layer="91"/>
 <junction x="236.22" y="43.18"/>
@@ -32079,14 +32327,14 @@ to the internal 2.048V Ref</text>
 <pinref part="Q1" gate="G$1" pin="D"/>
 <wire x1="284.48" y1="48.26" x2="297.18" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="297.18" y1="48.26" x2="297.18" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="VLOAD" gate="G$1" pin="TP"/>
-<wire x1="297.18" y1="71.12" x2="297.18" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="ULOAD" gate="G$1" pin="TP"/>
+<wire x1="297.18" y1="71.12" x2="297.18" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="271.78" y1="71.12" x2="271.78" y2="73.66" width="0.1524" layer="91"/>
 <junction x="297.18" y="71.12"/>
 <pinref part="R12" gate="G$1" pin="2"/>
 <wire x1="271.78" y1="71.12" x2="297.18" y2="71.12" width="0.1524" layer="91"/>
 <junction x="271.78" y="71.12"/>
-<pinref part="IN+" gate="G$1" pin="P$1"/>
+<pinref part="F1" gate="F" pin="2"/>
 </segment>
 </net>
 <net name="VLOAD_DROP" class="0">
@@ -32098,7 +32346,7 @@ to the internal 2.048V Ref</text>
 <wire x1="289.56" y1="38.1" x2="294.64" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="274.32" y1="22.86" x2="274.32" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="274.32" y1="38.1" x2="284.48" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="VLOAD_DROP" gate="G$1" pin="TP"/>
+<pinref part="UDROP" gate="G$1" pin="TP"/>
 <label x="289.56" y="33.02" size="1.27" layer="95" xref="yes"/>
 <wire x1="289.56" y1="38.1" x2="289.56" y2="33.02" width="0.1524" layer="91"/>
 <junction x="289.56" y="38.1"/>
@@ -32158,7 +32406,7 @@ to the internal 2.048V Ref</text>
 <wire x1="259.08" y1="40.64" x2="266.7" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="259.08" y1="30.48" x2="259.08" y2="40.64" width="0.1524" layer="91"/>
 <junction x="259.08" y="40.64"/>
-<pinref part="FET_DRV" gate="G$1" pin="TP"/>
+<pinref part="UDRV" gate="G$1" pin="TP"/>
 <wire x1="259.08" y1="40.64" x2="259.08" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -32244,7 +32492,7 @@ to the internal 2.048V Ref</text>
 <wire x1="271.78" y1="60.96" x2="276.86" y2="60.96" width="0.1524" layer="91"/>
 <junction x="271.78" y="60.96"/>
 <label x="279.4" y="60.96" size="1.524" layer="95" xref="yes"/>
-<pinref part="VLOAD_ATT" gate="G$1" pin="TP"/>
+<pinref part="UATT" gate="G$1" pin="TP"/>
 <wire x1="276.86" y1="60.96" x2="279.4" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="276.86" y1="63.5" x2="276.86" y2="60.96" width="0.1524" layer="91"/>
 <junction x="276.86" y="60.96"/>
@@ -32570,6 +32818,13 @@ to the internal 2.048V Ref</text>
 <pinref part="IC6" gate="G$1" pin="!CS!"/>
 <wire x1="195.58" y1="81.28" x2="193.04" y2="81.28" width="0.1524" layer="91"/>
 <label x="193.04" y="81.28" size="1.524" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="IN+" gate="G$1" pin="P$1"/>
+<pinref part="F1" gate="F" pin="1"/>
+<wire x1="297.18" y1="83.82" x2="297.18" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
