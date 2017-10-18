@@ -32176,7 +32176,9 @@ W = angled&lt;p&gt;
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="F1" library="Seeed-OPL-fuse" deviceset="FUSE" device="'1206'" value="6.3A/63V"/>
 <part name="D3" library="SparkFun-DiscreteSemi" deviceset="DIODE-ZENER" device="5.6V" value="1.1V"/>
-<part name="SV1" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-2" device="" package3d_urn="urn:adsk.eagle:package:8334/1"/>
+<part name="J1" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-2" device="" package3d_urn="urn:adsk.eagle:package:8334/1"/>
+<part name="XTAL1" library="testpad" deviceset="TP" device="B1,27"/>
+<part name="XTAL2" library="testpad" deviceset="TP" device="B1,27"/>
 </parts>
 <sheets>
 <sheet>
@@ -32380,8 +32382,8 @@ to the internal 2.048V Ref</text>
 <instance part="+3V1" gate="G$1" x="78.74" y="-30.48"/>
 <instance part="GND17" gate="1" x="78.74" y="-55.88"/>
 <instance part="R9" gate="G$1" x="218.44" y="5.08"/>
-<instance part="+3V8" gate="G$1" x="210.82" y="10.16"/>
-<instance part="GND21" gate="1" x="215.9" y="-25.4" rot="R270"/>
+<instance part="+3V8" gate="G$1" x="208.28" y="10.16"/>
+<instance part="GND21" gate="1" x="210.82" y="-25.4" rot="R270"/>
 <instance part="GND23" gate="1" x="215.9" y="0" rot="R270"/>
 <instance part="C7" gate="G$1" x="210.82" y="-43.18"/>
 <instance part="C8" gate="G$1" x="218.44" y="-43.18"/>
@@ -32406,7 +32408,13 @@ to the internal 2.048V Ref</text>
 <instance part="GND15" gate="1" x="83.82" y="40.64" rot="R270"/>
 <instance part="F1" gate="F" x="297.18" y="78.74" rot="R270"/>
 <instance part="D3" gate="G$1" x="279.4" y="55.88" rot="R90"/>
-<instance part="SV1" gate="1" x="302.26" y="-22.86"/>
+<instance part="J1" gate="1" x="302.26" y="-22.86"/>
+<instance part="XTAL1" gate="G$1" x="218.44" y="-10.16" smashed="yes">
+<attribute name="TP_SIGNAL_NAME" x="219.71" y="-11.43" size="1.778" layer="97"/>
+</instance>
+<instance part="XTAL2" gate="G$1" x="218.44" y="-15.24" smashed="yes">
+<attribute name="TP_SIGNAL_NAME" x="219.71" y="-16.51" size="1.778" layer="97"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -32540,7 +32548,7 @@ to the internal 2.048V Ref</text>
 <pinref part="IC1" gate="G$1" pin="GND@1"/>
 <wire x1="226.06" y1="-25.4" x2="220.98" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="GND@2"/>
-<wire x1="220.98" y1="-25.4" x2="218.44" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="-25.4" x2="213.36" y2="-25.4" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="-27.94" x2="220.98" y2="-27.94" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="-27.94" x2="220.98" y2="-25.4" width="0.1524" layer="91"/>
 <junction x="220.98" y="-25.4"/>
@@ -32634,7 +32642,7 @@ to the internal 2.048V Ref</text>
 <pinref part="GND15" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="1" pin="1"/>
+<pinref part="J1" gate="1" pin="1"/>
 <wire x1="309.88" y1="-25.4" x2="312.42" y2="-25.4" width="0.1524" layer="91"/>
 <label x="312.42" y="-25.4" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -32778,7 +32786,7 @@ to the internal 2.048V Ref</text>
 <label x="294.64" y="-45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="1" pin="4"/>
+<pinref part="J1" gate="1" pin="4"/>
 <wire x1="294.64" y1="-22.86" x2="292.1" y2="-22.86" width="0.1524" layer="91"/>
 <label x="292.1" y="-22.86" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -32800,7 +32808,7 @@ to the internal 2.048V Ref</text>
 <label x="294.64" y="-43.18" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="1" pin="3"/>
+<pinref part="J1" gate="1" pin="3"/>
 <wire x1="309.88" y1="-22.86" x2="312.42" y2="-22.86" width="0.1524" layer="91"/>
 <label x="312.42" y="-22.86" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -33032,25 +33040,25 @@ to the internal 2.048V Ref</text>
 </segment>
 <segment>
 <pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="213.36" y1="5.08" x2="210.82" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="5.08" x2="210.82" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="5.08" x2="208.28" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="5.08" x2="208.28" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="+3V8" gate="G$1" pin="+3V3"/>
 <pinref part="IC1" gate="G$1" pin="AREF"/>
-<wire x1="226.06" y1="-2.54" x2="210.82" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="-2.54" x2="210.82" y2="5.08" width="0.1524" layer="91"/>
-<junction x="210.82" y="5.08"/>
+<wire x1="226.06" y1="-2.54" x2="208.28" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="-2.54" x2="208.28" y2="5.08" width="0.1524" layer="91"/>
+<junction x="208.28" y="5.08"/>
 <pinref part="IC1" gate="G$1" pin="AVCC"/>
-<wire x1="226.06" y1="-5.08" x2="210.82" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="-5.08" x2="210.82" y2="-2.54" width="0.1524" layer="91"/>
-<junction x="210.82" y="-2.54"/>
+<wire x1="226.06" y1="-5.08" x2="208.28" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="-5.08" x2="208.28" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="208.28" y="-2.54"/>
 <pinref part="IC1" gate="G$1" pin="VCC@1"/>
-<wire x1="226.06" y1="-30.48" x2="210.82" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="-30.48" x2="210.82" y2="-5.08" width="0.1524" layer="91"/>
-<junction x="210.82" y="-5.08"/>
+<wire x1="226.06" y1="-30.48" x2="208.28" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="-30.48" x2="208.28" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="208.28" y="-5.08"/>
 <pinref part="IC1" gate="G$1" pin="VCC@2"/>
-<wire x1="226.06" y1="-33.02" x2="210.82" y2="-33.02" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="-33.02" x2="210.82" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="210.82" y="-30.48"/>
+<wire x1="226.06" y1="-33.02" x2="208.28" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="-33.02" x2="208.28" y2="-30.48" width="0.1524" layer="91"/>
+<junction x="208.28" y="-30.48"/>
 </segment>
 <segment>
 <pinref part="+3V9" gate="G$1" pin="+3V3"/>
@@ -33158,7 +33166,7 @@ to the internal 2.048V Ref</text>
 <label x="294.64" y="-48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="1" pin="2"/>
+<pinref part="J1" gate="1" pin="2"/>
 <wire x1="294.64" y1="-25.4" x2="292.1" y2="-25.4" width="0.1524" layer="91"/>
 <label x="292.1" y="-25.4" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -33175,7 +33183,7 @@ to the internal 2.048V Ref</text>
 <label x="294.64" y="-40.64" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="1" pin="6"/>
+<pinref part="J1" gate="1" pin="6"/>
 <wire x1="294.64" y1="-20.32" x2="292.1" y2="-20.32" width="0.1524" layer="91"/>
 <label x="292.1" y="-20.32" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -33201,9 +33209,23 @@ to the internal 2.048V Ref</text>
 </net>
 <net name="+5V" class="0">
 <segment>
-<pinref part="SV1" gate="1" pin="5"/>
+<pinref part="J1" gate="1" pin="5"/>
 <wire x1="309.88" y1="-20.32" x2="312.42" y2="-20.32" width="0.1524" layer="91"/>
 <label x="312.42" y="-20.32" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PB7(XTAL2/TOSC2)"/>
+<pinref part="XTAL2" gate="G$1" pin="TP"/>
+<wire x1="226.06" y1="-17.78" x2="218.44" y2="-17.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PB6(XTAL1/TOSC1)"/>
+<wire x1="218.44" y1="-12.7" x2="226.06" y2="-12.7" width="0.1524" layer="91"/>
+<pinref part="XTAL1" gate="G$1" pin="TP"/>
 </segment>
 </net>
 </nets>
